@@ -1,0 +1,25 @@
+<p>
+  <a href="#/">Back to Search</a>
+</p>
+
+Forecast for {{ city }}
+
+<hr>
+Days: <a href="#/forecast/2">2</a> | <a href="#/forecast/4">4</a> | <a href="#/forecast/6">6</a>
+<hr>
+
+<div ng-repeat="w in weatherResult.list">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{ convertToDate(w.dt) | date: 'MMM d y' }}</h3>
+        </div>
+        <div class="panel-body">
+          Daytime temperature: {{ convertToFahrenheit(w.temp.day) }}
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
