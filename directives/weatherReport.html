@@ -1,11 +1,8 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">{{ convertToDate(w.dt) | date: 'MMM d y' }}</h3>
+    <h3 class="panel-title">{{ convertToDate({ dt: weatherDay.dt }) | date: dateFormat}}</h3>
   </div>
   <div class="panel-body">
-    Daytime temperature: {{ convertToFahrenheit(w.temp.day) }}
-  </div>
-  <div class="panel-body pull-right">
-    Nighttime temperature: {{ convertToFahrenheit(w.temp.night) }}
+    Daytime temperature: {{ convertToStandard({ daytimeTemp: weatherDay.temp.day }) }}
   </div>
 </div>

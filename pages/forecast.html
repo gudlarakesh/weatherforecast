@@ -11,7 +11,7 @@ Days: <a href="#/forecast/2">2</a> | <a href="#/forecast/4">4</a> | <a href="#/f
 <div ng-repeat="w in weatherResult.list">
   <div class="row">
     <div class="col-md-12">
-      <weather-report></weather-report>
+      <weather-report weather-day="w"convert-to-standard="convertToFahrenheit(daytimeTemp)" convert-to-date="convertToDate(dt)" date-format="MMM d, y"></weather-report>
     </div>
   </div>
   
